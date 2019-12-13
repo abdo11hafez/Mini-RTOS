@@ -32,7 +32,7 @@ Preemptive Kernel Based OS**
     
 - **Other Specifications:**
     - Context Switching Operation is Done through a Pended Service Call Exception (PendSV) 
-      Configured as the lowest Prtority Excption to insure that there is no higher priority exceptions(OS Services) are Pending.
+      Configured as the lowest Priority Exception to insure that there is no higher priority exceptions (OS Services) are Pending.
       
     - Shared Resourcs Protection Objects(Semaphores, Mutexes and Message Queues) Are Timer Supported, Allowing the Task to 
       Wait for a certain amount of SysTick Timer Ticks in case of the Semaphore or Mutex not available for Acquiring 
