@@ -2,7 +2,7 @@
 **In this project, I used C-language and ARM Assembly ISA to develop implement a
 Preemptive Kernel Based OS**
 
-## the OS specefications:-
+## the OS Specefications:-
 - **Kernel Objects Available:**
     - Tasks.
     - Queues.
@@ -28,4 +28,12 @@ Preemptive Kernel Based OS**
     - `OS_QueueRead`: to receive a Message from a Message Queue.
     
     All Kernel Services (Except OS_Init) are Called via a Supervisor Call Exception (SVC),to Allow those Servics to Access all the
-    Proccesor Resourses in the **prevliged** State.    
+    Proccesor Resourses in the **privileged** State.   
+    
+- **Other Specifications:**
+    - Context Switching Operation is Done through a Pended Service Call Exception (PendSV) 
+      Configured as the lowest Prtority Excption to insure that there is no higher priority exceptions(OS Services) are Pending.
+      
+    - Shared Resourcs Protection Objects(Semaphores, Mutexes and Message Queues) Are Timer Supported, Allowing the Task to 
+      Wait for a certain amount of SysTick Timer Ticks in case of the Semaphore or Mutex not available for Acquiring 
+      or the Message Queues Empty or full in case of Reading or Writing.
