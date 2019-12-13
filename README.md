@@ -9,7 +9,7 @@ Preemptive Kernel Based OS**
     - Semaphores.
     - Mutexes.
     
-    All Kernel Objects are Created using static memory allocation,i.e. Before Program Execution.
+    All Kernel Objects are Created using **static memory allocation**,i.e. Before Program Execution.
     
 - **Kernel Services Available:**
     - `OS_Init`: for initializing the SysTick Timer, Exception Priorities and the Ready Tasks List.
@@ -27,17 +27,18 @@ Preemptive Kernel Based OS**
     - `OS_QueueWrite`: to Send a Message to a Message Queue.
     - `OS_QueueRead`: to receive a Message from a Message Queue.
     
-    All Kernel Services (Except OS_Init) are Called via a Supervisor Call Exception (SVC),to Allow those Servics to Access all the
-    Proccesor Resourses in the **privileged** State.   
+    All Kernel Services (Except OS_Init) are Called via a **Supervisor Call Exception (SVC)**,to Allow those Servics to Access all the
+    Proccesor Resourses in the **Privileged** State.   
     
 - **Other Specifications:**
-    - Context Switching Operation is Done through a Pended Service Call Exception (PendSV) 
+    - Context Switching Operation is Done through a **Pended Service Call Exception (PendSV)** 
       Configured as the lowest Priority Exception to insure that there is no higher priority exceptions (OS Services) are Pending.
       
-    - Shared Resourcs Protection Objects(Semaphores, Mutexes and Message Queues) Are Timer Supported, Allowing the Task to 
+    - Shared Resourcs Protection Objects(Semaphores, Mutexes and Message Queues) Are **Timer Supported**, Allowing the Task to 
       Wait for a certain amount of SysTick Timer Ticks in case of the Semaphore or Mutex not available for Acquiring 
       or the Message Queues Empty or full in case of Reading or Writing.
       
-    - Developed and Tested on Texas Instruments TM4C123GH6PM Micro-controller. 
+    - Developed and Tested on **Texas Instruments TM4C123GH6PM LaunchPad**. 
+    - Shall Work on **any ARM Cortex M-4 Based Micro-controller** Without any Changes.
     - Developed on Keil uVision4.
-    - No External liberaries used (Like CMSIS and TivaWare).
+    - **No External Liberaries used** (Like CMSIS and TivaWare).
