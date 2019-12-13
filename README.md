@@ -8,6 +8,7 @@ Preemptive Kernel Based OS**
     - Queues.
     - Semaphores.
     - Mutexes.
+    
 All Kernel Objects are Created using static memory allocation,i.e. Before Program Execution.
     
 - **Kernel Services Available:**
