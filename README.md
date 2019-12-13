@@ -28,4 +28,4 @@ Preemptive Kernel Based OS**
     - `OS_QueueRead`: to receive a Message from a Message Queue.
     
     All Kernel Services (Except OS_Init) are Called via a Supervisor Call Exception (SVC),to Allow those Servics to Access all the
-    Proccesor Resourses in the Unprevliged State.    
+    Proccesor Resourses in the **prevliged** State.    
