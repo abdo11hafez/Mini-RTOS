@@ -15,7 +15,7 @@ All Kernel Objects are Created using static memory allocation,i.e. Before Progra
     - `OS_Init`: for initializing the SysTick Timer, Exception Priorities and the Ready Tasks List.
     - `OS_StartScheduler`: for Starting the OS.
     - `OS_GetSchedulerStatus`: to determine the Schedular Status (Running or not Running).
-    - `OS_TaskCreate`: to Creating a Task and add it to the Ready Tasks List.
+    - `OS_TaskCreate`: to Create a Task and add it to the Ready Tasks List.
     - `OS_TaskDelay`: to Remove a Task from the Ready Tasks List for certain amount of Systick Timer Ticks.
     - `OS_SemaphoreCreate`: to Create a Semaphore Object and Assign an Initial Value to it (0:n).
     - `OS_SemaphoreTake`: to Acquire the Semaphore if it's Available.
@@ -27,3 +27,4 @@ All Kernel Objects are Created using static memory allocation,i.e. Before Progra
     - `OS_QueueWrite`: to Send a Message to a Message Queue.
     - `OS_QueueRead`: to receive a Message from a Message Queue.
     
+All Kernel Services (Except OS_Init) are Called via a Supervisor Call Exception (SVC),to Allow those Servics to Access all the Proccesor Resourses in the Unprevliged State.
