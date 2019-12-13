@@ -9,7 +9,7 @@ Preemptive Kernel Based OS**
     - Semaphores.
     - Mutexes.
     
-All Kernel Objects are Created using static memory allocation,i.e. Before Program Execution.
+    All Kernel Objects are Created using static memory allocation,i.e. Before Program Execution.
     
 - **Kernel Services Available:**
     - `OS_Init`: for initializing the SysTick Timer, Exception Priorities and the Ready Tasks List.
@@ -27,4 +27,5 @@ All Kernel Objects are Created using static memory allocation,i.e. Before Progra
     - `OS_QueueWrite`: to Send a Message to a Message Queue.
     - `OS_QueueRead`: to receive a Message from a Message Queue.
     
-All Kernel Services (Except OS_Init) are Called via a Supervisor Call Exception (SVC),to Allow those Servics to Access all the Proccesor Resourses in the Unprevliged State.
+    All Kernel Services (Except OS_Init) are Called via a Supervisor Call Exception (SVC),to Allow those Servics to Access all the
+    Proccesor Resourses in the Unprevliged State.    
