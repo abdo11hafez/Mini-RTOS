@@ -69,7 +69,7 @@ int main(void)
 	OS_MutexCreate(&Mutex1,1);
 
 	
-	OS_Start_Scheduler();
+	OS_StartScheduler();
 	while(1)
 	{
 		

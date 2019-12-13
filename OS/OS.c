@@ -13,7 +13,7 @@ extern Task_t * pRunningTask;
 static Task_t IdleTask;
 static Stack_t IdleTaskStack;
 
-__asm void OS_Start_Scheduler(void)
+__asm void OS_StartScheduler(void)
 {
 	svc  0
 	bx  LR
@@ -114,7 +114,7 @@ void OS_Init(void)
 }
 
 
-void Start_Scheduler(void)
+void StartScheduler(void)
 {
 	Task_t * pTaskToRun;              
 	uint32_t PSP_Value ;

@@ -11,9 +11,9 @@
 
 
 void OS_Init(void);
-void OS_Start_Scheduler(void);
+void OS_StartScheduler(void);
 uint32_t OS_GetSchedulerStatus(void);
-void Start_Scheduler(void);
+void StartScheduler(void);
 void OS_TaskCreate(Task_t * Task, Stack_t * Stack,uint32_t priority, void * Function);
 void OS_TaskDelay(uint32_t Ticks);
 void OS_SemaphoreCreate(Semaphore_t * pSemaphore, uint32_t InitialValue);

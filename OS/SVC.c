@@ -35,7 +35,7 @@ void OS_SVC_Handler_main(uint32_t * svc_args)
 	switch(svc_number)
 	{
 		case 0:
-			Start_Scheduler();
+			StartScheduler();
 			break;
 
 		case 1:
