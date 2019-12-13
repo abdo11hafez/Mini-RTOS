@@ -37,3 +37,7 @@ Preemptive Kernel Based OS**
     - Shared Resourcs Protection Objects(Semaphores, Mutexes and Message Queues) Are Timer Supported, Allowing the Task to 
       Wait for a certain amount of SysTick Timer Ticks in case of the Semaphore or Mutex not available for Acquiring 
       or the Message Queues Empty or full in case of Reading or Writing.
+      
+    - Developed and Tested on Texas Instruments TM4C123GH6PM Micro-controller. 
+    - Developed on Keil uVision4.
+    - No External liberaries used (Like CMSIS and TivaWare).
