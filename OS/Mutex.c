@@ -78,13 +78,14 @@ uint32_t MutexLock(Mutex_t * pMutex, int32_t WaitTicks)
 		{
 			/* Infinite Waiting */
 		}
+		InheritTaskPrioroty(pMutex->pTask);
 		returnStatus = 2;
+		
 	}
 	else
 	{
 		/* No Waiting Required */
 	}
-	InheritTaskPrioroty(pMutex->pTask);
 	return returnStatus;
 }
 
