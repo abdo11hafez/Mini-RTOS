@@ -1,5 +1,5 @@
 # Mini Real Time Operating System
-**In this project, I used C-language and ARM ISA to develop implement a
+**In this project, I used C-language and ARM ISA to develop a
 Preemptive Kernel Based OS**
 
 ## the OS Specefications:-
